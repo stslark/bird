@@ -16,9 +16,13 @@
 	var win = window.location.replace('https://www.baidu.com');
 	win.focus();
     }
+    document.addEventListener("visibilitychange", function(){
+    alert("visibilitychange");
     window.onblur = () =>{
-	alert("???");
+	alert("window.onblur");
     }
+}
+)
 </script>
 </html>
 
