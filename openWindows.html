@@ -13,12 +13,9 @@
     var isPc = IsPC();
     var hasSeal = false;
     window.location.href = isPc ? 'seal://vpn':'seal://page/vpn';
-document.addEventListener("visibilitychange",function(){
-    alert("visibilitychange");
     window.onblur = () =>{
         alert("window.onblur");
     }
-})
 }
 function IsPC() {
 var userAgentInfo = navigator.userAgent;
