@@ -6,33 +6,5 @@
 </head>
 <body>
 <h2>Test:</h2>
-<button onclick="ToSeal()">ToSeal</button>
 </body>
-<script>
-    function ToSeal(){
-    var isPc = IsPC();
-    var hasSeal = false;
-    window.location.href = isPc ? 'seal://vpn':'seal://page/vpn';
-document.addEventListener("visibilitychange",function(){
-    alert("visibilitychange");
-    window.onblur = () =>{
-        alert("window.onblur");
-    }
-})
-}
-function IsPC() {
-var userAgentInfo = navigator.userAgent;
-var Agents = ["Android", "iPhone",
-    "SymbianOS", "Windows Phone",
-    "iPad", "iPod"];
- var flag = true;
-for (var v = 0; v < Agents.length; v++) {
-        if (userAgentInfo.indexOf(Agents[v]) > 0) {
-            flag = false;
-        break;
-        }
-    }
-    return flag;
-}
-</script>
 </html>
