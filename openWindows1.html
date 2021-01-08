@@ -1,15 +1,22 @@
-<!DOCTYPE html>
-<html>
-<head lang="en">
-    <meta charset="UTF-8">
-    <title>Endless loop</title>
-</head>
-<body onload="myfun()">
-</body>
-<script>
-    function myfun(){
-        alert('Next execute while(true){}');
-        while(true){}
-    }
+<!DOCTYPE html>   
+<html>   
+<head>   
+<meta charset=" utf-8">   
+<title>使用 window.onload() 测试</title>
+<style type="text/css">
+#bg{
+    width:120px;
+    height:120px;
+    border:4px solid blue;
+}
+</style>
+<script type="text/javascript">
+window.onload=function(){
+    document.getElementById("bg").style.backgroundColor="#F00";
+}
 </script>
+</head>
+<body>
+    <div id="bg"></div>
+</body>
 </html>
