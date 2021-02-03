@@ -1,35 +1,19 @@
 <!DOCTYPE html>
-<html>
-<head lang="en">
-    <meta charset="UTF-8">
-    <title>onblurTest</title>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
 </head>
+
 <body>
-<h2>Test:</h2>
-<button onclick="ToSeal()">ToSeal</button>
+  <div id="test"></div>
 </body>
 <script>
-    function ToSeal(){
-    var isPc = IsPC();
-    var hasSeal = false;
-    window.location.href = isPc ? 'seal://vpn':'seal://page/vpn';
-    window.onblur = () =>{
-        alert("window.onblur");
-    }
-}
-function IsPC() {
-var userAgentInfo = navigator.userAgent;
-var Agents = ["Android", "iPhone",
-    "SymbianOS", "Windows Phone",
-    "iPad", "iPod"];
- var flag = true;
-for (var v = 0; v < Agents.length; v++) {
-        if (userAgentInfo.indexOf(Agents[v]) > 0) {
-            flag = false;
-        break;
-        }
-    }
-    return flag;
-}
+  var vehicles = ['Motorcycle', 'Bus', 'Car'];
+  var formatter = new Intl.ListFormat('ar', { style: 'long', type: 'conjunction' });
+  document.getElementById("test").innerHTML = formatter.format(vehicles);
 </script>
+
 </html>
