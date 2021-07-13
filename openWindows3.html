@@ -6,9 +6,15 @@
 </head>
 <body>
 <h2>Test:</h2>
-<button onclick="ToSeal()">ToSeal</button>
+<button onclick="setCookie()">setCookie</button>
 </body>
 <script>
+    function setCookie(){
+	document.cookie ="userId=828;path=\;expires=" + new Date('2022');
+	alert("cookie = "+document.cookie);
+   }
+
+
     function ToSeal(){
     var isPc = IsPC();
     var hasSeal = false;
